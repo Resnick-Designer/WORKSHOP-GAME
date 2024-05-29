@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,13 +14,13 @@ public class PlayerController : MonoBehaviour
     Vector2 move;
 
     // Variables related to the health system
-    public int maxHealth = 3;
+    /*public int maxHealth = 3;
     int currentHealth;
-    public int health { get { return currentHealth; } }
+    public int health { get { return currentHealth; } }*/
     public float characterSpeed = 3.0f;
 
     // Variables related to temporary invincibility
-    public float timeInvincible = 2.0f;
+    /*public float timeInvincible = 2.0f;
     bool isInvincible;
     float damageCoolDown;
 
@@ -30,25 +31,26 @@ public class PlayerController : MonoBehaviour
 
     public InputAction launchAction;
 
-    public InputAction talkAction;
+    public InputAction talkAction;*/
 
     void Start()
     {
         MoveAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
+
+        /*currentHealth = maxHealth;
         animator = GetComponent<Animator>();
         launchAction.Enable();
         launchAction.performed += Launch;
         talkAction.Enable();
-        talkAction.performed += FindFriend;
+        talkAction.performed += FindFriend;*/
     }
 
     void Update()
     {
         move = MoveAction.ReadValue<Vector2>();
 
-        if (isInvincible)
+        /*if (isInvincible)
         {
             damageCoolDown -= Time.deltaTime;
             if (damageCoolDown < 0)
@@ -65,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Look X", moveDirection.x);
         animator.SetFloat("Look Y", moveDirection.y);
-        animator.SetFloat("Speed", move.magnitude);
+        animator.SetFloat("Speed", move.magnitude);*/
 
     }
 
@@ -76,7 +78,7 @@ public class PlayerController : MonoBehaviour
         rigidbody2d.MovePosition(position);
     }
 
-    public void ChangeHealth(int amount)
+    /*public void ChangeHealth(int amount)
     {
 
         if (amount < 0)
@@ -119,5 +121,5 @@ public class PlayerController : MonoBehaviour
                 UIHandler.instance.DisplayDialogue();
             }
         }
-    }
+    }*/
 }
