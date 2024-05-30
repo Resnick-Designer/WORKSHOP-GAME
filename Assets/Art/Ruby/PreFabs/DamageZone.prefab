@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4228997730346488058}
   - component: {fileID: 4622272776018264096}
   - component: {fileID: 2065455393621688362}
+  - component: {fileID: 5685430831755817299}
   m_Layer: 0
   m_Name: DamageZone
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.87, y: -5.12, z: 0}
-  m_LocalScale: {x: 1.4277, y: 1.4277, z: 1.4277}
+  m_LocalScale: {x: 1.4271027, y: 1.4271027, z: 1.4271027}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,13 +74,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3ae37404d426cca4fa1c055cdeb711d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 4.634335, y: 4.3389688}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -114,19 +115,32 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2749999, y: 1.3187456}
+  m_Offset: {x: 2.2838233, y: 2.1953287}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.001953125, y: 0}
     oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
+    newSize: {x: 4.634335, y: 4.3389688}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.529004}
+  m_Size: {x: 4.5776467, y: 4.2821703}
   m_EdgeRadius: 0
+--- !u!114 &5685430831755817299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413373949831873486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc9d1fcf942c424f8bf842ef9cabaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthDecrease: 3

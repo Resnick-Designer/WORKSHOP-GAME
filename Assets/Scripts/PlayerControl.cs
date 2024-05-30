@@ -14,17 +14,17 @@ public class PlayerController : MonoBehaviour
     Vector2 move;
 
     // Variables related to the health system
-    /*public int maxHealth = 3;
+    public int maxHealth = 3;
     int currentHealth;
-    public int health { get { return currentHealth; } }*/
+    public int health { get { return currentHealth; } }
     public float characterSpeed = 3.0f;
 
     // Variables related to temporary invincibility
-    /*public float timeInvincible = 2.0f;
+    public float timeInvincible = 2.0f;
     bool isInvincible;
     float damageCoolDown;
 
-    Animator animator;
+    /*Animator animator;
     Vector2 moveDirection = new Vector2(1, 0);
 
     public GameObject projectilePrefab;
@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
         MoveAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
 
-        /*currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
+        /*animator = GetComponent<Animator>();
         launchAction.Enable();
         launchAction.performed += Launch;
         talkAction.Enable();
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         move = MoveAction.ReadValue<Vector2>();
 
-        /*if (isInvincible)
+        if (isInvincible)
         {
             damageCoolDown -= Time.deltaTime;
             if (damageCoolDown < 0)
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+        /*if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
             moveDirection.Set(move.x, move.y);
             moveDirection.Normalize();
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         rigidbody2d.MovePosition(position);
     }
 
-    /*public void ChangeHealth(int amount)
+    public void ChangeHealth(int amount)
     {
 
         if (amount < 0)
@@ -89,16 +89,16 @@ public class PlayerController : MonoBehaviour
             }
             isInvincible = true;
             damageCoolDown = timeInvincible;
-            animator.SetTrigger("Hit");
+            //animator.SetTrigger("Hit");
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
-        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+        //UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
 
     }
 
-    void Launch(InputAction.CallbackContext context)
+    /*void Launch(InputAction.CallbackContext context)
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 1.5f, Quaternion.identity);
 
