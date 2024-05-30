@@ -10,8 +10,8 @@ public class UIHandler : MonoBehaviour
     VisualElement m_Healthbar;
 
     public float displayTime = 4.0f;
-    private VisualElement m_NonPlayerDialogue;
-    private float m_TimerDisplay;
+    //private VisualElement m_NonPlayerDialogue;
+    //private float m_TimerDisplay;
 
 
     private void Awake()
@@ -27,12 +27,12 @@ public class UIHandler : MonoBehaviour
 
         SetHealthValue(1.0f);
 
-        m_NonPlayerDialogue = uiDocument.rootVisualElement.Q<VisualElement>("NPCDialogue");
+        /*m_NonPlayerDialogue = uiDocument.rootVisualElement.Q<VisualElement>("NPCDialogue");
         m_NonPlayerDialogue.style.display = DisplayStyle.None;
-        m_TimerDisplay = -1.0f;
+        m_TimerDisplay = -1.0f;*/
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (m_NonPlayerDialogue.style.display != DisplayStyle.None)
         {
@@ -43,16 +43,16 @@ public class UIHandler : MonoBehaviour
             }
         }
 
-    }
+    }*/
 
     public void SetHealthValue(float percentage)
     {
         m_Healthbar.style.width = Length.Percent(Mathf.Clamp(percentage, 0f, 1f) * 100.0f);
     }
 
-    public void DisplayDialogue()
+    /*public void DisplayDialogue()
     {
         m_NonPlayerDialogue.style.display = DisplayStyle.Flex;
         m_TimerDisplay = displayTime;
-    }
+    }*/
 }
